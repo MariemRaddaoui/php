@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+
+</head>
+
+<body style="text-align:center;">
+    <form id="form" name="Restaurant" method="POST" action="recap.php">
+        <fieldset>
+            <legend>COMMANDE:</legend>
+            <p>
+                <label for="nom">Votre nom: </label>
+                <input type="text" placeholder="Votre nom?" name="nom" id="nom" size="40" maxlength="40" required pattern="[A-Za-z]{3,30}"><br><br>
+                <label for="prenom">Votre prénom: </label>
+                <input type="text" placeholder="Votre prenom?" name="prenom" id="prenom" size="40" maxlength="40" required pattern="[A-Za-z]{3,30}"><br><br>
+                <label for="nombre">No. de sandwichs: (max 20)</label>
+                <input type="text" name="nombre" id="nombre" required pattern="([1-9]|([1][0-9]))|20">
+                <br><br>
+                <label for="adresse">Votre adresse: </label>
+                <textarea rows="6" cols="60" placeholder="Votre adresse?" name="adresse" id="adresse" size="100" maxlength="1000"></textarea><br><br>
+                <label for="type">Type du/des sandwich(s): </label>
+                <select name="type" size="3" required>
+            <option value="viande">Viande</option>
+            <option value="poulet">Poulet</option>
+            <option value="Escalope">Escalope</option>
+          </select>
+                <p>Ingrédients à ajouter: </p>
+
+                <div>
+                    <input type="checkbox" id="harissa" name="harissa">
+                    <label for="harissa">Harissa</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="salade" name="salade">
+                    <label for="salade">Salade</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="mayonnaise" name="mayonnaise">
+                    <label for="mayonnaise">Mayonnaise</label>
+                </div>
+                <br><br>
+        </fieldset>
+        <br>
+
+        <input name="submit" value="Submit" type="submit" onclick="myFunction()" />
+    </form>
+</body>
+<script src="script.js"></script>
+
+</html>
